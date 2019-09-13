@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" extends="task" label="NeedIt" max_length="40" name="x_58872_needit_needit" sizeclass="3" type="collection">
+        <element attributes="encode_utf8=false" label="solicitada par" mandatory="true" max_length="32" name="u_requested_for" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" default="legal" label="Tipo de Solicitud" mandatory="true" max_length="40" name="u_request_type" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Recursos humanos" sequence="0" value="hr"/>
+                <element inactive_on_update="false" label="Instalaciones" sequence="1" value="instalaciones"/>
+                <element inactive_on_update="false" label="Legal" sequence="2" value="legal"/>
+                <element inactive_on_update="false" label="Su elección de departamento" sequence="3" value="su elección de departamento"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="1" default="legal 1" label="lo que se necesita" mandatory="true" max_length="40" name="u_what_needed" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Recursos humanos 1" sequence="0" value="hr 1"/>
+                <element inactive_on_update="false" label="Recursos humanos 2" sequence="1" value="hr 2"/>
+                <element inactive_on_update="false" label="Instalaciones 1" sequence="2" value="instalaciones 1"/>
+                <element inactive_on_update="false" label="Instalaciones 2" sequence="3" value="instalaciones 2"/>
+                <element inactive_on_update="false" label="Legal 1" sequence="4" value="legal 1"/>
+                <element inactive_on_update="false" label="Legal 2" sequence="5" value="legal 2"/>
+                <element inactive_on_update="false" label="Su elección de departamento 1" sequence="6" value="su elección de departamento 1"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Cuando sea Necesario" mandatory="true" max_length="40" name="u_when_needed" type="glide_date_time"/>
+    </element>
+</database>
